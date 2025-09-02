@@ -12,7 +12,7 @@
 		"prebuild": "npm run generate",
 		"lint": "next lint --dir src --fix",
 		"generate": "graphql-codegen --config .graphqlrc.ts",
-		"prepare": "husky install",
+		"prepare": "cd .. && husky install storefront/.husky",
 		"test": "playwright test"
 	},
 	"dependencies": {
@@ -80,6 +80,15 @@
 	},
 	"resolutions": {
 		"graphql": "16.8.1"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		],
+		"*.{json,md,css,scss}": [
+			"prettier --write"
+		]
 	},
 	"packageManager": "pnpm@9.6.0",
 	"engines": {
