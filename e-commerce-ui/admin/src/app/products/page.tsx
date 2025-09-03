@@ -118,7 +118,7 @@ const PaymentsPage = async () => {
   const data = await getData();
   return (
     <div className="">
-      <div className="mb-8 px-4 py-2 bg-secondary rounded-md">
+      <div className="mb-8 px-4 py-2 bg-secondary rounded-md" data-testid="products-page-header">
         <h1 className="font-semibold">All Products</h1>
       </div>
       <DataTable columns={columns} data={data} />

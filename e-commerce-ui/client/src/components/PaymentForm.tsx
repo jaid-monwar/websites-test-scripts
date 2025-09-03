@@ -34,6 +34,7 @@ const PaymentForm = () => {
           type="text"
           id="cardHolder"
           placeholder="John Doe"
+          data-testid="card-holder-input"
           {...register("cardHolder")}
         />
         {errors.cardHolder && (
@@ -64,6 +65,7 @@ const PaymentForm = () => {
           type="text"
           id="expirationDate"
           placeholder="01/32"
+          data-testid="expiration-date-input"
           {...register("expirationDate")}
         />
         {errors.expirationDate && (
@@ -79,6 +81,7 @@ const PaymentForm = () => {
           type="text"
           id="cvv"
           placeholder="123"
+          data-testid="cvv-input"
           {...register("cvv")}
         />
         {errors.cvv && (
@@ -93,6 +96,7 @@ const PaymentForm = () => {
       <button
         type="submit"
         className="w-full bg-gray-800 hover:bg-gray-900 transition-all duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
+        data-testid="checkout-btn"
       >
         Checkout
         <ShoppingCart className="w-3 h-3" />

@@ -162,6 +162,7 @@ const CartPage = () => {
                 <button
                   onClick={() => removeFromCart(item)}
                   className="w-8 h-8 rounded-full bg-red-100 hover:bg-red-200 transition-all duration-300 text-red-400 flex items-center justify-center cursor-pointer"
+                  data-testid="remove-item-btn"
                 >
                   <Trash2 className="w-3 h-3" />
                 </button>
@@ -213,6 +214,7 @@ const CartPage = () => {
             <button
               onClick={() => router.push("/cart?step=2", { scroll: false })}
               className="w-full bg-gray-800 hover:bg-gray-900 transition-all duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
+              data-testid="continue-btn"
             >
               Continue
               <ArrowRight className="w-3 h-3" />

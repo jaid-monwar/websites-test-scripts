@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="w-full flex items-center justify-between border-b border-gray-200 pb-4">
       {/* LEFT */}
-      <Link href="/" className="flex items-center">
+      <Link href="/" className="flex items-center" data-testid="logo-link">
         <Image
           src="/logo.png"
           alt="TrendLama"
@@ -23,7 +23,7 @@ const Navbar = () => {
       {/* RIGHT */}
       <div className="flex items-center gap-6">
         <SearchBar />
-        <Link href="/">
+        <Link href="/" data-testid="home-link">
           <Home className="w-4 h-4 text-gray-600"/>
         </Link>
         <Bell className="w-4 h-4 text-gray-600"/>

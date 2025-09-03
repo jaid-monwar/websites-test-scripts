@@ -60,6 +60,7 @@ const ProductInteraction = ({
                 selectedSize === size ? "border-gray-600" : "border-gray-300"
               }`}
               key={size}
+              data-testid={`size-${size}`}
               onClick={() => handleTypeChange("size", size)}
             >
               <div
@@ -85,6 +86,7 @@ const ProductInteraction = ({
                 selectedColor === color ? "border-gray-300" : "border-white"
               }`}
               key={color}
+              data-testid={`color-${color}`}
               onClick={() => handleTypeChange("color", color)}
             >
               <div className={`w-6 h-6`} style={{ backgroundColor: color }} />
@@ -115,6 +117,7 @@ const ProductInteraction = ({
       <button
         onClick={handleAddToCart}
         className="bg-gray-800 text-white px-4 py-2 rounded-md shadow-lg flex items-center justify-center gap-2 cursor-pointer text-sm font-medium"
+        data-testid="add-to-cart-detail-btn"
       >
         <Plus className="w-4 h-4" />
         Add to Cart

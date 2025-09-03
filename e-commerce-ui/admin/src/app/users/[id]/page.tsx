@@ -44,7 +44,7 @@ const SingleUserPage = () => {
         {/* LEFT */}
         <div className="w-full xl:w-1/3 space-y-6">
           {/* USER BADGES CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">
+          <div className="bg-primary-foreground p-4 rounded-lg" data-testid="user-badges-section">
             <h1 className="text-xl font-semibold">User Badges</h1>
             <div className="flex gap-4 mt-4">
               <HoverCard>

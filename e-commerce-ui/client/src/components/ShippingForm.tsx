@@ -38,6 +38,7 @@ const ShippingForm = ({
           type="text"
           id="name"
           placeholder="John Doe"
+          data-testid="name-input"
           {...register("name")}
         />
         {errors.name && (
@@ -53,6 +54,7 @@ const ShippingForm = ({
           type="email"
           id="email"
           placeholder="johndoe@gmail.com"
+          data-testid="email-input"
           {...register("email")}
         />
         {errors.email && (
@@ -68,6 +70,7 @@ const ShippingForm = ({
           type="text"
           id="phone"
           placeholder="123456789"
+          data-testid="phone-input"
           {...register("phone")}
         />
         {errors.phone && (
@@ -83,6 +86,7 @@ const ShippingForm = ({
           type="text"
           id="address"
           placeholder="123 Main St, Anytown"
+          data-testid="address-input"
           {...register("address")}
         />
         {errors.address && (
@@ -98,6 +102,7 @@ const ShippingForm = ({
           type="text"
           id="city"
           placeholder="New York"
+          data-testid="city-input"
           {...register("city")}
         />
         {errors.city && (

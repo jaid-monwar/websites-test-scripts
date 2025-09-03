@@ -42,7 +42,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <div className="shadow-lg rounded-lg overflow-hidden">
       {/* IMAGE */}
-      <Link href={`/products/${product.id}`}>
+      <Link href={`/products/${product.id}`} data-testid="product-link">
         <div className="relative aspect-[2/3]">
           <Image
             src={product.images[productTypes.color]}
@@ -65,6 +65,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
               name="size"
               id="size"
               className="ring ring-gray-300 rounded-md px-2 py-1"
+              data-testid="size-selector"
               onChange={(e) =>
                 handleProductType({ type: "size", value: e.target.value })
               }
@@ -88,6 +89,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
                       : "border-gray-200"
                   } rounded-full p-[1.2px]`}
                   key={color}
+                  data-testid={`color-${color}`}
                   onClick={() =>
                     handleProductType({ type: "color", value: color })
                   }
@@ -107,6 +109,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           <button
             onClick={handleAddToCart}
             className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
+            data-testid="add-to-cart-btn"
           >
             <ShoppingCart className="w-4 h-4" />
             Add to Cart

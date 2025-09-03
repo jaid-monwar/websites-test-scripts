@@ -15,15 +15,15 @@ const TodoList = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="">
-      <h1 className="text-lg font-medium mb-6">Todo List</h1>
+      <h1 className="text-lg font-medium mb-6" data-testid="todo-list-title">Todo List</h1>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <Button className="w-full">
+          <Button className="w-full" data-testid="calendar-trigger">
             <CalendarIcon />
             {date ? format(date, "PPP") : <span>Pick a date</span>}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="p-0 w-auto">
+        <PopoverContent className="p-0 w-auto" data-testid="calendar-popover">
           <Calendar
             mode="single"
             selected={date}
@@ -31,6 +31,7 @@ const TodoList = () => {
               setDate(date);
               setOpen(false);
             }}
+            data-testid="date-picker"
           />
         </PopoverContent>
       </Popover>
