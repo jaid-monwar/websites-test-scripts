@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Custom enhancements */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+}

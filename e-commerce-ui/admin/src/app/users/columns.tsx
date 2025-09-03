@@ -87,9 +87,9 @@ export const columns: ColumnDef<User>[] = [
       return (
         <div
           className={cn(
-            `p-1 rounded-md w-max text-xs`,
-            status === "active" && "bg-green-500/40",
-            status === "inactive" && "bg-red-500/40"
+            `p-1 rounded-md w-max text-xs transition-colors`,
+            status === "active" && "bg-green-500/40 hover:bg-green-500/50",
+            status === "inactive" && "bg-red-500/40 hover:bg-red-500/50"
           )}
         >
           {status as string}
@@ -105,7 +105,7 @@ export const columns: ColumnDef<User>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
+            <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-accent/60 transition-colors">
               <span className="sr-only">Open menu</span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>

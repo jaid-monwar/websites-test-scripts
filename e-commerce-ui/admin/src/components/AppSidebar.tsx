@@ -114,7 +114,7 @@ const AppSidebar = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className="hover:bg-accent/80 transition-colors">
                   <Link href="/products">
                     <Shirt />
                     See All Products
@@ -162,7 +162,7 @@ const AppSidebar = () => {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild className="hover:bg-accent/80 transition-colors">
                   <Link href="/users">
                     <User />
                     See All Users

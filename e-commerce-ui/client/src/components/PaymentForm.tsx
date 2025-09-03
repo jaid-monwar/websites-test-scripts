@@ -30,7 +30,7 @@ const PaymentForm = () => {
           Name on card
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="cardHolder"
           placeholder="John Doe"
@@ -60,7 +60,7 @@ const PaymentForm = () => {
           Expiration Date
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="expirationDate"
           placeholder="01/32"
@@ -75,7 +75,7 @@ const PaymentForm = () => {
           CVV
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="cvv"
           placeholder="123"
