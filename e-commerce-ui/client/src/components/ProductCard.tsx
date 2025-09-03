@@ -40,18 +40,21 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   };
 
   return (
-    <div className="shadow-lg rounded-lg overflow-hidden">
-      {/* IMAGE */}
-      <Link href={`/products/${product.id}`}>
-        <div className="relative aspect-[2/3]">
-          <Image
-            src={product.images[productTypes.color]}
-            alt={product.name}
-            fill
-            className="object-cover hover:scale-105 transition-all duration-300"
-          />
+    <div className="product-card-wrapper">
+      <div className="shadow-lg rounded-lg overflow-hidden">
+        {/* IMAGE */}
+        <div className="product-image-container">
+          <Link href={`/products/${product.id}`}>
+            <div className="relative aspect-[2/3]">
+              <Image
+                src={product.images[productTypes.color]}
+                alt={product.name}
+                fill
+                className="object-cover hover:scale-105 transition-all duration-300"
+              />
+            </div>
+          </Link>
         </div>
-      </Link>
       {/* PRODUCT DETAIL */}
       <div className="flex flex-col gap-4 p-4">
         <h1 className="font-medium">{product.name}</h1>
@@ -104,14 +107,17 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         {/* PRICE AND ADD TO CART BUTTON */}
         <div className="flex items-center justify-between">
           <p className="font-medium">${product.price.toFixed(2)}</p>
-          <button
-            onClick={handleAddToCart}
-            className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
-          >
-            <ShoppingCart className="w-4 h-4" />
-            Add to Cart
-          </button>
+          <div className="add-to-cart-wrapper">
+            <button
+              onClick={handleAddToCart}
+              className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              Add to Cart
+            </button>
+          </div>
         </div>
+      </div>
       </div>
     </div>
   );

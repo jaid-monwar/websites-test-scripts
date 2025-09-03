@@ -25,10 +25,11 @@ const ShippingForm = ({
   };
 
   return (
-    <form
-      className="flex flex-col gap-4"
-      onSubmit={handleSubmit(handleShippingForm)}
-    >
+    <div className="shipping-form-wrapper">
+      <form
+        className="flex flex-col gap-4"
+        onSubmit={handleSubmit(handleShippingForm)}
+      >
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="text-xs text-gray-500 font-medium">
           Name
@@ -104,14 +105,17 @@ const ShippingForm = ({
           <p className="text-xs text-red-500">{errors.city.message}</p>
         )}
       </div>
-      <button
-        type="submit"
-        className="w-full bg-gray-800 hover:bg-gray-900 transition-all duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
-      >
-        Continue
-        <ArrowRight className="w-3 h-3" />
-      </button>
-    </form>
+      <div className="continue-button-container">
+        <button
+          type="submit"
+          className="w-full bg-gray-800 hover:bg-gray-900 transition-all duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
+        >
+          Continue
+          <ArrowRight className="w-3 h-3" />
+        </button>
+      </div>
+      </form>
+    </div>
   );
 };
 

@@ -16,13 +16,14 @@ const TodoList = () => {
   return (
     <div className="">
       <h1 className="text-lg font-medium mb-6">Todo List</h1>
-      <Popover open={open} onOpenChange={setOpen}>
-        <PopoverTrigger asChild>
-          <Button className="w-full">
-            <CalendarIcon />
-            {date ? format(date, "PPP") : <span>Pick a date</span>}
-          </Button>
-        </PopoverTrigger>
+      <div className="calendar-wrapper">
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Button className="w-full">
+              <CalendarIcon />
+              {date ? format(date, "PPP") : <span>Pick a date</span>}
+            </Button>
+          </PopoverTrigger>
         <PopoverContent className="p-0 w-auto">
           <Calendar
             mode="single"
@@ -33,9 +34,11 @@ const TodoList = () => {
             }}
           />
         </PopoverContent>
-      </Popover>
+        </Popover>
+      </div>
       {/* LIST */}
-      <ScrollArea className="max-h-[400px] mt-4 overflow-y-auto">
+      <div className="todo-list-wrapper">
+        <ScrollArea className="max-h-[400px] mt-4 overflow-y-auto">
         <div className="flex flex-col gap-4">
           {/* LIST ITEM */}
           <Card className="p-4">
@@ -155,7 +158,8 @@ const TodoList = () => {
             </div>
           </Card>
         </div>
-      </ScrollArea>
+        </ScrollArea>
+      </div>
     </div>
   );
 };
