@@ -114,18 +114,20 @@ const ProductInteraction = ({
         </div>
       </div>
       {/* BUTTONS */}
-      <button
-        onClick={handleAddToCart}
-        className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-md shadow-lg flex items-center justify-center gap-2 cursor-pointer text-sm font-medium transition-colors"
+      <div className="product-buttons-wrapper">
+        <button
+          onClick={handleAddToCart}
+          className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-md shadow-lg flex items-center justify-center gap-2 cursor-pointer text-sm font-medium transition-colors"
         data-testid="add-to-cart-detail-btn"
-      >
-        <Plus className="w-4 h-4" />
-        Add to Cart
-      </button>
-      <button className="ring-1 ring-gray-400 shadow-lg text-gray-800 px-4 py-2 rounded-md flex items-center justify-center cursor-pointer gap-2 text-sm font-medium hover:ring-gray-500 hover:bg-gray-50 transition-all">
-        <ShoppingCart className="w-4 h-4" />
-        Buy this Item
-      </button>
+        >
+          <Plus className="w-4 h-4" />
+          Add to Cart
+        </button>
+        <button className="ring-1 ring-gray-400 shadow-lg text-gray-800 px-4 py-2 rounded-md flex items-center justify-center cursor-pointer gap-2 text-sm font-medium hover:ring-gray-500 hover:bg-gray-50 transition-all">
+          <ShoppingCart className="w-4 h-4" />
+          Buy this Item
+        </button>
+      </div>
     </div>
   );
 };

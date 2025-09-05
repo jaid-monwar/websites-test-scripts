@@ -21,10 +21,11 @@ const PaymentForm = () => {
   };
 
   return (
-    <form
-      className="flex flex-col gap-4"
-      onSubmit={handleSubmit(handlePaymentForm)}
-    >
+    <div className="payment-form-wrapper">
+      <form
+        className="flex flex-col gap-4"
+        onSubmit={handleSubmit(handlePaymentForm)}
+      >
       <div className="flex flex-col gap-1">
         <label htmlFor="cardHolder" className="text-xs text-gray-500 font-medium">
           Name on card
@@ -93,15 +94,18 @@ const PaymentForm = () => {
         <Image src="/cards.png" alt="cards" width={50} height={25} className="rounded-md"/>
         <Image src="/stripe.png" alt="stripe" width={50} height={25} className="rounded-md"/>
       </div>
-      <button
-        type="submit"
-        className="w-full bg-gray-800 hover:bg-gray-900 transition-all duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
-        data-testid="checkout-btn"
+      <div className="checkout-button-container">
+        <button
+          type="submit"
+          className="w-full bg-gray-800 hover:bg-gray-900 transition-all duration-300 text-white p-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
+          data-testid="checkout-btn"
       >
-        Checkout
-        <ShoppingCart className="w-3 h-3" />
-      </button>
-    </form>
+          Checkout
+          <ShoppingCart className="w-3 h-3" />
+        </button>
+      </div>
+      </form>
+    </div>
   );
 };
 
