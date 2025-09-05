@@ -6,9 +6,9 @@ import ShoppingCartIcon from "./ShoppingCartIcon";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between border-b border-gray-200 pb-4">
+    <nav className="w-full flex items-center justify-between border-b border-gray-200 pb-4 bg-white/95 backdrop-blur-sm">
       {/* LEFT */}
-      <Link href="/" className="flex items-center" data-testid="logo-link">
+      <Link href="/" className="flex items-center" data-testid="logo-link hover:opacity-80 transition-opacity">
         <Image
           src="/logo.png"
           alt="TrendLama"

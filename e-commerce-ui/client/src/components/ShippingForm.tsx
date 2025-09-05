@@ -34,7 +34,7 @@ const ShippingForm = ({
           Name
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="name"
           placeholder="John Doe"
@@ -50,7 +50,7 @@ const ShippingForm = ({
           Email
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="email"
           id="email"
           placeholder="johndoe@gmail.com"
@@ -66,7 +66,7 @@ const ShippingForm = ({
           Phone
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="phone"
           placeholder="123456789"
@@ -82,7 +82,7 @@ const ShippingForm = ({
           Address
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="address"
           placeholder="123 Main St, Anytown"
@@ -98,7 +98,7 @@ const ShippingForm = ({
           City
         </label>
         <input
-          className="border-b border-gray-200 py-2 outline-none text-sm"
+          className="border-b border-gray-200 py-2 outline-none text-sm focus:border-gray-400 transition-colors"
           type="text"
           id="city"
           placeholder="New York"

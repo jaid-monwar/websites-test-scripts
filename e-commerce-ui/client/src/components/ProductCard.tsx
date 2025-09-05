@@ -64,7 +64,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
             <select
               name="size"
               id="size"
-              className="ring ring-gray-300 rounded-md px-2 py-1"
+              className="ring ring-gray-300 rounded-md px-2 py-1 hover:ring-gray-400 transition-colors"
               data-testid="size-selector"
               onChange={(e) =>
                 handleProductType({ type: "size", value: e.target.value })
@@ -108,7 +108,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           <p className="font-medium">${product.price.toFixed(2)}</p>
           <button
             onClick={handleAddToCart}
-            className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
+            className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black hover:ring-gray-300 transition-all duration-300 flex items-center gap-2"
             data-testid="add-to-cart-btn"
           >
             <ShoppingCart className="w-4 h-4" />
